@@ -1,54 +1,61 @@
-//index.js
-//获取应用实例
-const app = getApp()
+// index.js
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    isActive:'1',
+    topicList:[
+      {
+        legend:'',
+        name:'郑家3公主',
+        title:'年入一百万元是一种什么样的体验？',
+        article:'我每个月只有2000元底薪',
+        agree:55,
+        discuss:66,
+        uid:'fdsafafdiyt123'
+      },{
+        legend:'',
+        name:'甘大少',
+        title:'年入一百万元是一种什么样的体验？',
+        article:'谢邀！',
+        agree:17,
+        discuss:100,
+        uid:'fdsvvvvafafd123'
+      },{
+        legend:'',
+        name:'郊县吴孟达',
+        title:'年入一百万元是一种什么样的体验？',
+        article:' 谢邀，我月薪2500，无法回答这个问题。谢邀，我月薪2500，无法回答这个问题。',
+        agree:44,
+        discuss:33,
+        uid:'fdsafacccfd123'
+      },{
+        legend:'',
+        name:'肥皂君',
+        title:'年入一百万元是一种什么样的体验？',
+        article:'没我什么事情，没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情没我什么事情',
+        agree:56,
+        discuss:5,
+        uid:'fdsafaaaafd123'
+      },{
+        legend:'',
+        name:'香波君',
+        title:'年入一百万元是一种什么样的体验？',
+        article:' 谢邀，我月薪2500，无法回答这个问题。谢邀，我月薪2500，无法回答这个问题。',
+        agree:12,
+        discuss:1,
+        uid:'fdsafafdeqw123'
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    ]
   },
-  getUserInfo: function(e) {
+  // 标签栏切换
+  tabActiveToggle: function(e){
     console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+    // current index
+    var index = e.target.dataset.index;
+
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+      isActive: index
+  })
+
   }
 })

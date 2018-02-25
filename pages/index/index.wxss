@@ -1,21 +1,141 @@
 /**index.wxss**/
-.userinfo {
+
+page {
+  background: #F6F6F6;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  position: relative;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+.question-submit {
+  background-color: #fff;
+  padding: 15rpx 25rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.question-submit>input,
+.question-submit>button {
+  display: inline-block;
+  vertical-align: top;
+  height: 60rpx;
+}
+
+.question-submit>input {
+  background-color: #f6f6f6;
+  border-radius: 6rpx;
+  width: 80%;
+  margin-right: 5%;
+  padding: 2rpx 15rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+
+.question-submit>button {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 14rpx;
+  background-color: transparent;
+  color: #0084ff;
+  border: none;
+  outline: 0;
+}
+
+.tab {
+  padding-top: 5rpx;
+  background-color: #fff;
+}
+
+.tab text {
+  font-size: 24rpx;
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  padding: 14rpx 0;
+  color: #99999a;
+  border-bottom: 4rpx solid transparent;
+  font-weight: 600;
+}
+
+.tab text.active {
+  border-bottom-color: #323233;
+  color: #323232;
+}
+
+.tab-content {
+  width: 100%;
+  height: 920rpx;
+  margin-top: 190rpx;
+}
+
+.tab-content .tab-item {
+  display: none;
+  padding: 0 8rpx;
+}
+
+.tab-content .tab-item.tab-active {
+  display: block;
+}
+
+/* 话题列表 */
+
+.topic-item {
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.topic-author-info text {
+  display: inline-block;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  vertical-align: middle;
+}
+
+.topic-author-info text:first-child {
+  width: 50rpx;
+  height: 50rpx;
   border-radius: 50%;
+  background-color: tomato;
+  margin-right: 16rpx;
+  font-size: 15rpx;
+  text-align: center;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.topic-author-info text:last-child {
+  color: #b0b0b0;
+  font-weight: 600;
+  width: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.usermotto {
-  margin-top: 200px;
+.topic-title {
+  font-size: 28rpx;
+  padding-top: 16rpx;
+  padding-bottom: 14rpx;
+  font-weight: 600;
+}
+
+.topic-content {
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 40rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.topic-bottom {
+  font-size: 22rpx;
+  color: #9a9a9a;
+  padding-top: 14rpx;
 }

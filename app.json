@@ -11,9 +11,9 @@
     "backgroundColor": "#FFF", 
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FFF", 
-    "navigationBarTitleText": "知小乎", 
+    "navigationBarTitleText": "逼乎", 
     "navigationBarTextStyle": "black", 
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "backgroundColor": "#fff",
