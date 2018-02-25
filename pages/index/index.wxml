@@ -5,7 +5,7 @@
     <input type='text' />
     <button>提问</button>
   </view>
-  <view class="tab"  bindtap='tabActiveToggle'>
+  <view class="tab" bindtap='tabActiveToggle'>
     <text class="{{isActive==='1'?'active':null}}" data-index='1'>关注</text>
     <text class="{{isActive==='2'?'active':null}}" data-index='2'>推荐</text>
     <text class="{{isActive==='3'?'active':null}}" data-index='3'>热榜</text>
@@ -14,14 +14,9 @@
 
 <!-- 列表 -->
 <view class='tab-content'>
-  <view class="tab-item {{isActive==='1'?'tab-active':null}}" >
+  <view class="tab-item {{isActive==='1'?'tab-active':null}}">
     <scroll-view>
-      <view 
-        class="topic-item" 
-        wx:for="{{topicList}}" 
-        wx:key="unique"
-        wx:for-item="item"
-        >
+      <view class="topic-item" wx:for="{{topicList}}" wx:key="unique" wx:for-item="item">
         <view class="topic-author-info">
           <text>头像</text>
           <text>{{item.name}}</text>
@@ -42,6 +37,28 @@
       </view>
     </scroll-view>
   </view>
-  <view class="tab-item {{isActive==='2'?'tab-active':null}}" >2</view>
-  <view class="tab-item {{isActive==='3'?'tab-active':null}}" >{{isActive}}</view>
+  <view class="tab-item {{isActive==='2'?'tab-active':null}}">
+    <scroll-view>
+      <view class="topic-item" wx:for="{{topicList}}" wx:key="unique" wx:for-item="item">
+        <view class="topic-author-info">
+          <text>头像</text>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="topic-title">
+          {{item.title}}
+        </view>
+        <view class="topic-content">
+          {{item.article}}
+        </view>
+        <view class="topic-bottom">
+          <text>{{item.agree}}赞同</text>
+          ·
+          <text>{{item.discuss}}评论</text>
+          ·
+          <text>去往专栏</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="tab-item {{isActive==='3'?'tab-active':null}}">{{isActive}}</view>
 </view>
