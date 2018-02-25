@@ -8,9 +8,49 @@
     "pages/zone/zone"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "backgroundColor": "#FFF", 
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF", 
+    "navigationBarTitleText": "知小乎", 
+    "navigationBarTextStyle": "black", 
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#999", 
+    "selectedColor": "#1E8AE8",
+    "borderStyle": "white", 
+    "list": [
+      {
+        "selectedIconPath": "assets/home-light.png",
+        "iconPath": "assets/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "assets/find-light.png",
+        "iconPath": "assets/find.png",
+        "pagePath": "pages/idea/idea",
+        "text": "想法"
+      },
+      {
+        "selectedIconPath": "assets/market-light.png",
+        "iconPath": "assets/market.png",
+        "pagePath": "pages/market/market",
+        "text": "市场"
+      },
+      {
+        "selectedIconPath": "assets/msg-light.png",
+        "iconPath": "assets/msg.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "assets/more-light.png",
+        "iconPath": "assets/more.png",
+        "pagePath": "pages/zone/zone",
+        "text": "我的"
+      }
+    ]
   }
 }
