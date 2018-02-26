@@ -1,2 +1,18 @@
 <!--pages/zone/zone.wxml-->
-<text>pages/zone/zone.wxml</text>
+<button wx:if="{{!hasUserInfo}}" class="login_button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信快捷登录</button>
+<view class="zone_container" wx:if="{{hasUserInfo}}">
+  <view class="search_header">
+    <icon type="search" size="18" class="search_icon" />
+    <input class="search_input" confirm-type="search" placeholder="搜索逼呼内容" />
+    <image src="/assest/icon/qrcode.png" class="qrcoding" />
+  </view>
+  <view class="person_info">
+    <view class="person_info_wrap">
+      <image class="avatarUrl" src="{{userInfo.avatarUrl}}" />
+      <view class="nickname_tips_wrap">
+        <text class="block_text nickname">{{userInfo.nickName}}</text>
+        <text class="block_text tips">查看个人主页或编辑简介</text>
+      </view>
+    </view>
+  </view>
+</view>

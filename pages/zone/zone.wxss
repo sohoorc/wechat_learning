@@ -1,1 +1,91 @@
 /* pages/zone/zone.wxss */
+page {
+  background-color: #f6f6f6;  
+}
+
+.block_text {
+  display: block;
+}
+
+.search_header {
+  position: fixed;
+  top: 0;  
+  width: 100%;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.login_button {
+  width: 70%;
+  margin-top: 20%;
+  background-color: #1aad19;
+  color: #ffffff;
+}
+
+.search_input {
+  background: #f6f6f6;
+  width: 400rpx;
+  height: 30px;
+  margin-left: 50rpx;
+  padding-left:180rpx;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.search_icon {
+  position: absolute;
+  left: 170rpx;
+  top: 6px;
+  z-index: 999;
+  height: 30px;
+}
+
+.qrcoding {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+}
+
+.person_info {
+  background: #ffffff;
+  margin: 50px 0 10px 0;
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  height: 400rpx;
+}
+
+.person_info_wrap {
+  position: relative;
+  margin: 0 10px 10px 10px;
+  height: 50%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.avatarUrl {
+  position: absolute;
+  top:50%;
+  left: 15px;
+  transform: translateY(-50%);
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+
+.nickname_tips_wrap {
+  margin-left: 210rpx;
+  transform: translateY(30%)
+}
+
+.person_info .nickname {
+  font-size: 40rpx;
+  font-weight: bold;
+  height: 80rpx;
+}
+
+.person_info .tips {
+  font-size: 30rpx;
+}

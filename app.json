@@ -8,7 +8,7 @@
     "pages/zone/zone"
   ],
   "window": {
-    "backgroundColor": "#FFF", 
+    "backgroundColor": "#f6f6f6",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FFF", 
     "navigationBarTitleText": "逼乎", 
@@ -17,9 +17,9 @@
   },
   "tabBar": {
     "backgroundColor": "#fff",
-    "color": "#999", 
+    "color": "#999",
     "selectedColor": "#1E8AE8",
-    "borderStyle": "white", 
+    "borderStyle": "white",
     "list": [
       {
         "selectedIconPath": "/assest/icon/home-light.png",
