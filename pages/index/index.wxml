@@ -37,6 +37,7 @@
       </view>
     </scroll-view>
   </view>
+
   <view class="tab-item {{isActive==='2'?'tab-active':null}}">
     <scroll-view>
       <view class="topic-item" wx:for="{{topicList}}" wx:key="unique" wx:for-item="item">
@@ -60,5 +61,6 @@
       </view>
     </scroll-view>
   </view>
+
   <view class="tab-item {{isActive==='3'?'tab-active':null}}">{{isActive}}</view>
 </view>

@@ -41,7 +41,7 @@ page {
 .question-submit>button {
   height: 60rpx;
   line-height: 60rpx;
-  font-size: 14rpx;
+  font-size: 18rpx;
   background-color: transparent;
   color: #0084ff;
   border: none;
