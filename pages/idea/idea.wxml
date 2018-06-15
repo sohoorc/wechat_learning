@@ -1,5 +1,5 @@
 <!--pages/idea/idea.wxml-->
 <text>pages/idea/idea.wxml</text>
 <view>
-  <picker-view>啥意思 </picker-view>
+  <picker-view> </picker-view>
 </view>
